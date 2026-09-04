@@ -1,0 +1,96 @@
+{
+  "schema": 1,
+  "skill": "product-research-cn",
+  "runs_per_query": 3,
+  "trigger_threshold": 0.5,
+  "queries": [
+    {
+      "q": "我们还没开始调研，想知道要不要重做企业报销流程，请设计一套研究方案",
+      "expect": "trigger",
+      "split": "train"
+    },
+    {
+      "q": "销售说客户想要自动审批，但入口使用率很低，帮我设计能区分几种解释的研究",
+      "expect": "trigger",
+      "split": "train"
+    },
+    {
+      "q": "这个新功能只有概念稿，应该先访谈、概念测试还是问卷？请给方法选择和边界",
+      "expect": "trigger",
+      "split": "train"
+    },
+    {
+      "q": "给跨地区的企业管理员研究制定样本覆盖和追加停止规则，不要套固定人数",
+      "expect": "trigger",
+      "split": "train"
+    },
+    {
+      "q": "评审这份用户研究方案，检查研究问题、反证、样本、伦理和证据到决策规则",
+      "expect": "trigger",
+      "split": "validation"
+    },
+    {
+      "q": "我们准备验证新手引导是否真的改善理解，请规划定性与定量证据的先后关系",
+      "expect": "trigger",
+      "split": "validation"
+    },
+    {
+      "q": "只有一句模糊的业务假设，先给我一张受限研究卡并列出最小补证",
+      "expect": "trigger",
+      "split": "validation"
+    },
+    {
+      "q": "为内部员工参与的敏感产品研究制定知情同意、脱敏和退出计划",
+      "expect": "trigger",
+      "split": "validation"
+    },
+    {
+      "q": "把这 15 份客户访谈逐字稿逐份编码，做参与者备忘录和负例分析",
+      "expect": "no-trigger",
+      "split": "train",
+      "near_miss_of": "interview-analyst-cn",
+      "notes": "已有原始访谈的正式编码，不是未来研究设计"
+    },
+    {
+      "q": "把访谈、满意度问卷和客服工单去重后综合成一份决策简报",
+      "expect": "no-trigger",
+      "split": "train",
+      "near_miss_of": "synthesize-research-cn"
+    },
+    {
+      "q": "给支付流程做完整可用性测试执行包，包括招募文案、主持稿和问题台账",
+      "expect": "no-trigger",
+      "split": "train",
+      "near_miss_of": "usability-test-plan-cn"
+    },
+    {
+      "q": "分析这份 800 行满意度问卷 CSV，计算分布、区间和分组差异",
+      "expect": "no-trigger",
+      "split": "validation",
+      "near_miss_of": "measure-survey-analysis-cn"
+    },
+    {
+      "q": "从工单、评论和输赢单中提炼客户购买与流失机制，形成 VOC 和 ICP 假设",
+      "expect": "no-trigger",
+      "split": "validation",
+      "near_miss_of": "customer-research-cn"
+    },
+    {
+      "q": "估算中国工业巡检 SaaS 的 TAM、SAM 和三年 SOM",
+      "expect": "no-trigger",
+      "split": "validation",
+      "near_miss_of": "discover-market-sizing-cn"
+    },
+    {
+      "q": "只查清三家公司的最新公开定价并给出 URL、发布日期和访问时间",
+      "expect": "no-trigger",
+      "split": "validation",
+      "near_miss_of": "web-evidence-research-cn"
+    },
+    {
+      "q": "修复这个 Python 脚本的编码错误并补一个单元测试",
+      "expect": "no-trigger",
+      "split": "train"
+    }
+  ]
+}
