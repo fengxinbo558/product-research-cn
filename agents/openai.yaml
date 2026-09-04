@@ -1,0 +1,4 @@
+interface:
+  display_name: "产品研究设计"
+  short_description: "把待决策问题转成可执行的研究方案、样本设计与停止规则"
+  default_prompt: "使用 $product-research-cn 为这个产品决策设计一份可执行的研究方案。"
